@@ -1,0 +1,91 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Стиль для контейнера формы */
+.form-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 100px; /* Отступ сверху для центрирования */
+    position: relative;
+}
+
+/* Стили для полей ввода и их меток */
+.field {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Стили для кнопок */
+.button {
+    width: 100%;
+    height: 40px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #d62839;
+}
+
+/* Стиль для заголовка и ссылок */
+h1 {
+    margin-top: 0;
+    color: #fff;
+}
+
+/* Стиль для кнопки "Назад на главную" */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #d62839;
+}
+
+/* Стиль для ссылок в формах */
+#register-link, #reset-password-link, #back-to-login-link {
+    color: #e63946;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+#register-link:hover, #reset-password-link:hover, #back-to-login-link:hover {
+    text-decoration: underline;
+}
