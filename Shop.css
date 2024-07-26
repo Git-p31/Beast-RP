@@ -1,10 +1,13 @@
-/* Общие стили */
+/* Shop.css */
 body {
     font-family: Arial, sans-serif;
     background-color: #141414;
     color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-image: url('images/background.jpg'); /* Замените на путь к вашему фоновому изображению */
+    background-size: cover;
+    background-position: center;
 }
 
 header {
@@ -43,4 +46,102 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #202020;
+    border: 1px solid #ff0000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.tab-button:hover, .tab-button.active {
+    background-color: #ff0000;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый цвет */
+    color: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    width: 180px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px); /* Добавление размытия */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-price {
+    display: none;
+    position: absolute;
+    bottom: -50px; /* Скрываем под ячейкой */
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.product-card:hover .product-price {
+    display: block;
+    animation: slideUp 0.3s ease forwards; /* Анимация для плавного появления */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+
+.product-price button {
+    background-color: #00ff00;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 80%;
+    margin: 10px 10%;
+    border-radius: 5px;
+    font-weight: bold;
 }

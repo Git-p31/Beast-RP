@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Shop.css">
-    <script src="Shop.css" defer></script>
     <title>Shop - BEAST RP</title>
 </head>
 <body>
     <header>
         <div class="logo">
-
+            <!-- Логотип можно добавить здесь -->
         </div>
         <nav>
             <ul>
@@ -27,3 +26,123 @@
             </a>
         </div>
     </header>
+    <main>
+        <div class="buttons-container">
+            <button class="tab-button" data-tab="donate">Донат</button>
+            <button class="tab-button" data-tab="currency">Валюта</button>
+            <button class="tab-button" data-tab="premium">Премиум</button>
+            <button class="tab-button" data-tab="exclusive">Эксклюзивное</button>
+        </div>
+        <div class="content-container">
+            <div id="donate" class="tab-content">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/Coin.png" alt="Старт для начала">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <p>СТАРТ ДЛЯ НАЧАЛА</p>
+                            <h2>100 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 100 ₽</button>
+                        </div>
+                    </div>
+                    <!-- Добавьте остальные блоки для доната здесь -->
+                </div>
+            </div>
+            <div id="currency" class="tab-content active">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/mone.jpg" alt="Старт для начала">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <p>СТАРТ ДЛЯ НАЧАЛА</p>
+                            <h2>100 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 100 ₽</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/solid.jpg" alt="Солидненько">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <p>СОЛИДНЕНЬКО</p>
+                            <h2>250 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 250 ₽</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/perfect.jpg" alt="Самое то">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <p>САМОЕ ТО</p>
+                            <h2>550 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 550 ₽</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/thief.jpg" alt="Воровское">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <п>ВОРОВСКОЕ</п>
+                            <h2>1 390 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 1 390 ₽</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/gold.jpg" alt="Золотые запасы">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <п>ЗОЛОТЫЕ ЗАПАСЫ</п>
+                            <h2>7 500 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 7 500 ₽</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="premium" class="tab-content">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/start.jpg" alt="Старт для начала">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <п>СТАРТ ДЛЯ НАЧАЛА</п>
+                            <h2>100 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 100 ₽</button>
+                        </div>
+                    </div>
+                    <!-- Добавьте остальные блоки для премиума здесь -->
+                </div>
+            </div>
+            <div id="exclusive" class="tab-content">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/start.jpg" alt="Старт для начала">
+                        <div class="product-info">
+                            <h3>НАБОР</h3>
+                            <п>СТАРТ ДЛЯ НАЧАЛА</п>
+                            <h2>100 000</h2>
+                        </div>
+                        <div class="product-price">
+                            <button>Купить за 100 ₽</button>
+                        </div>
+                    </div>
+                    <!-- Добавьте остальные блоки для эксклюзивного здесь -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="Shop.js" defer></script>
+</body>
+</html>
