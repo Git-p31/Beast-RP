@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #222;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ff0000, #ffea00, #000000);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+section h1 {
+    color: #ff0000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#factions {
+    text-align: center;
+}
+
+.faction-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.faction {
+    background: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 23%;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.faction img {
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.faction h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.faction p {
+    color: #ccc;
+}
+
+.faction button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.faction button:hover {
+    background: #ff5500;
+}
+
+#steps .step-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#steps .step {
+    background: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#steps .step-number {
+    background: #ffea00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto 10px auto;
+}
+
+#steps .step-content h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+#steps .step-content p {
+    color: #ccc;
+}
+
+#home, #news, #about {
+    display: none;
+}
