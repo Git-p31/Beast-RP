@@ -1,2 +1,0 @@
-# Beast-RP
-Open source
