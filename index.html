@@ -19,6 +19,7 @@
         </nav>
     </header>
     <main>
+        <!-- Фракции -->
         <section id="factions">
             <h1>Фракции</h1>
             <p>Выбери свой путь: вступи в банду или борись с преступностью. Выбор только за тобой!</p>
@@ -27,28 +28,30 @@
                     <img src="images/police.png" alt="Полицейский">
                     <h2>Полиция</h2>
                     <p>Стань хранителем закона и порядка, поступи в полицейскую академию Москвы!</p>
-                    <button>Вступить</button>
+                    <button class="btn">Вступить</button>
                 </div>
                 <div class="faction">
                     <img src="images/rosgvardiya.png" alt="Росгвардия">
                     <h2>Росгвардия</h2>
                     <p>Вступи в элитную часть внутренних войск Республики, наведя порядок силовыми методами!</p>
-                    <button>Вступить</button>
+                    <button class="btn">Вступить</button>
                 </div>
                 <div class="faction">
                     <img src="images/chop.png" alt="ЧОП 'Синдикат'">
                     <h2>ЧОП "Синдикат"</h2>
                     <p>Мощная криминальная организация, действующая под прикрытием охранной фирмы!</p>
-                    <button>Вступить</button>
+                    <button class="btn">Вступить</button>
                 </div>
                 <div class="faction">
                     <img src="images/union.png" alt="Южное Братство">
                     <h2>Южное Братство</h2>
                     <p>Горячая кровь и верность своим братьям - основы братства Юнион. Стань его частью!</p>
-                    <button>Вступить</button>
+                    <button class="btn">Вступить</button>
                 </div>
             </div>
         </section>
+
+        <!-- Как Играть -->
         <section id="steps">
             <h1>Как начать играть</h1>
             <div class="step-container">
@@ -64,7 +67,7 @@
                     <div class="step-content">
                         <h2>Скачать клиент</h2>
                         <p>Загрузите и установите клиент игры с нашего сайта.</p>
-                        <button class="download-btn">Скачать клиент</button>
+                        <button class="download-button">Скачать клиент</button> 
                     </div>
                 </div>
                 <div class="step">
@@ -76,25 +79,99 @@
                 </div>
             </div>
         </section>
+
+        <!-- О Нас -->
         <section id="about">
-            <h1>О нас</h1>
-            <p>Узнайте больше о нашем проекте и команде.</p>
-            <div class="goals">
-                <h2>Наши Цели</h2>
-                <div class="goal">
-                    <h3>Цель 1</h3>
-                    <p>Развивать увлекательный и реалистичный игровой процесс для наших игроков.</p>
-                </div>
-                <div class="goal">
-                    <h3>Цель 2</h3>
-                    <p>Создать уникальную и динамичную игровую среду, поддерживающую творческие начинания.</p>
-                </div>
-                <div class="goal">
-                    <h3>Цель 3</h3>
-                    <p>Обеспечить стабильность и безопасность игрового процесса для комфортной игры.</p>
+            <div class="container">
+                <div class="background-image">
+                    <h1>Цели</h1>
+                    <div class="goal-container">
+                        <div class="goal" id="goal1">
+                            <div class="goal-content">
+                                <h2>Создавать и развивать новые проекты от Beast RP</h2>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;">
+                                        <span class="progress-percent">50%</span>
+                                    </div>
+                                </div>
+                                <div class="goal-status status-in-progress">В процессе</div>
+                            </div>
+                        </div>
+                        <div class="goal" id="goal2">
+                            <div class="goal-content">
+                                <h2>Укрепить позицию как единственный крупный CRMP-проект с высоким уровнем ролевой отыгровки</h2>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 0%;">
+                                        <span class="progress-percent">0%</span>
+                                    </div>
+                                </div>
+                                <div class="goal-status status-in-progress">В процессе</div>
+                            </div>
+                        </div>
+                        <div class="goal" id="goal3">
+                            <div class="goal-content">
+                                <h2>Завоевать сердца игроков и продолжать развиваться в направлении уникальной и приятной атмосферы</h2>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;">
+                                        <span class="progress-percent">75%</span>
+                                    </div>
+                                </div>
+                                <div class="goal-status status-in-progress">В процессе</div>
+                            </div>
+                        </div>
+                        <div class="goal" id="goal4">
+                            <div class="goal-content">
+                                <h2>Открыть новый проект с уникальной атмосферой и интересными функциями в GTA V</h2>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 40%;">
+                                        <span class="progress-percent">40%</span>
+                                    </div>
+                                </div>
+                                <div class="goal-status status-in-progress">В процессе</div>
+                            </div>
+                        </div>
+                        <div class="goal" id="goal5">
+                            <div class="goal-content">
+                                <h2>Выпустить кроссплатформенную версию проекта на смартфоны для игры как с компьютера, так и со смартфона</h2>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;">
+                                        <span class="progress-percent">50%</span>
+                                    </div>
+                                </div>
+                                <div class="goal-status status-in-progress">В процессе</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section id="news">
+            <div class="container">
+                <div class="background-image">
+                    <h1>Новости</h1>
+                    <div class="news-container">
+                        <div class="news-item" data-news-id="1">
+                            <h2>Новость 1</h2>
+                            <p>Краткое описание новости 1.</p>
+                            <button class="more-info-button" data-news-id="1">Подробнее</button>
+                        </div>
+                        <!-- Другие новости -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal">
+                <button class="modal-close" id="modal-close">&times;</button>
+                <h2>Заголовок модального окна</h2>
+                <p>Текст модального окна. Здесь можно добавить любые элементы и информацию.</p>
+            </div>
+        </div>
+        
+
+
     </main>
     <script src="script.js"></script>
 </body>

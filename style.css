@@ -5,6 +5,7 @@ body {
     color: #fff;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -20,8 +21,10 @@ header {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #ff0000;
     text-transform: uppercase;
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 nav ul {
@@ -37,20 +40,39 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ff0000;
+    color: #ffcc00;
     font-size: 18px;
     padding: 5px 10px;
-    transition: background 0.3s, color 0.3s;
+    position: relative;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 0, 0, 0.3);
+    background: rgba(255, 255, 0, 0.3);
     border-radius: 4px;
 }
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 
 main {
     padding: 20px;
 }
+
 
 section {
     margin-bottom: 40px;
@@ -61,10 +83,11 @@ section {
 }
 
 section h1 {
-    color: #ff0000;
+    color: #ffcc00;
     margin-bottom: 10px;
     text-align: center;
 }
+
 
 #factions {
     text-align: center;
@@ -81,20 +104,33 @@ section h1 {
     border-radius: 8px;
     padding: 20px;
     width: 23%;
+    min-width: 250px;
     margin: 10px;
     text-align: center;
     position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.faction:hover {
+    transform: translateY(-10px);
 }
 
 .faction img {
     width: 100%;
-    border-bottom: 2px solid #ff0000;
+    border-bottom: 2px solid #ffcc00;
     margin-bottom: 10px;
     border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.faction img:hover {
+    transform: scale(1.05);
 }
 
 .faction h2 {
-    color: #ff0000;
+    color: #ffcc00;
     margin-bottom: 10px;
 }
 
@@ -103,17 +139,18 @@ section h1 {
 }
 
 .faction button {
-    background: #ff0000;
+    background: linear-gradient(to right, #ff9900, #ffcc00);
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);
     transition: background 0.3s;
 }
 
 .faction button:hover {
-    background: #cc0000;
+    background: #cc8000;
 }
 
 #steps .step-container {
@@ -127,12 +164,19 @@ section h1 {
     border-radius: 8px;
     padding: 20px;
     width: 30%;
+    min-width: 250px;
     margin: 10px;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+#steps .step:hover {
+    transform: translateY(-10px);
 }
 
 #steps .step-number {
-    background: #ff0000;
+    background: #ffcc00;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -142,11 +186,11 @@ section h1 {
     font-size: 20px;
     font-weight: bold;
     margin: 0 auto 10px;
-    color: #fff;
+    color: #000;
 }
 
 #steps .step-content h2 {
-    color: #ff0000;
+    color: #ffcc00;
     margin-bottom: 10px;
 }
 
@@ -154,49 +198,202 @@ section h1 {
     color: #ccc;
 }
 
-.download-btn {
-    background: #ff0000;
+
+/* Основные кнопки */
+.button, .download-button, .more-info-button {
+    background: linear-gradient(to right, #ff9900, #ffcc00);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Уменьшено по сравнению с основной кнопкой */
     cursor: pointer;
     border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);
     transition: background 0.3s;
     margin-top: 10px;
-}
-
-.download-btn:hover {
-    background: #cc0000;
-}
-
-#about {
-    display: block;
-}
-
-.goals {
-    margin-top: 30px;
-}
-
-.goals h2 {
-    color: #ff0000;
-    margin-bottom: 25px;
+    font-size: 14px; /* Уменьшено по сравнению с основной кнопкой */
     text-align: center;
+    display: inline-block;
 }
 
-.goal {
-    background: #222;
-    border-radius: 10px;
+.button:hover, .download-button:hover, .more-info-button:hover {
+    background: #cc8000;
+}
+
+
+/* Модальное окно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон, более прозрачный */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(px); /* Эффект блюра */
+}
+
+.modal {
+    background: rgba(34, 34, 34, 0.8); /* Полупрозрачный темный фон, более прозрачный */
+    border-radius: 8px;
     padding: 20px;
-    margin: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%; /* На всю ширину контейнера */
+    height: 90%; /* На всю высоту контейнера */
+    position: relative; /* Используем relative для позиционирования закрывающей кнопки */
+    margin: auto; /* Центрируем модальное окно */
+    overflow-y: auto; /* Добавить скролл, если контент не помещается */
+    max-height: 90%; /* Максимальная высота */
 }
 
-.goal h3 {
-    color: #ff0000;
-    margin-bottom: 10px;
+.modal h2 {
+    margin-top: 0;
+    color: #ffcc00;
 }
 
-.goal p {
+.modal p {
     color: #ccc;
 }
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: #c82333;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+#about, #news {
+    position: relative;
+    padding: 40px 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+#about h1, #news h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.goal-container, .news-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.goal, .news-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.goal:hover, .news-item:hover {
+    transform: translateY(-10px);
+}
+
+.goal-content h2, .news-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.goal-content p, .news-item p {
+    color: #ccc;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #555;
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #ff9900, #ffcc00);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.progress-percent {
+    position: absolute;
+    right: 10px;
+}
+
+.goal-status, .news-status {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    text-align: center;
+}
+
+.status-new {
+    background: #28a745; 
+    color: #fff;
+}
+
+.status-in-progress {
+    background: #ffc107; 
+    color: #000;
+}
+
+.status-completed {
+    background: #dc3545; 
+    color: #fff;
+}
+
