@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         Object.values(statusClasses).forEach(cls => element.classList.remove(cls));
         element.classList.add(statusClasses[status]);
         element.textContent = {
-            new: 'Новая',
+            new: 'Новое',
             'in-progress': 'В процессе',
             completed: 'Выполнено'
         }[status];
@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Примеры обновления целей
-    updateGoal(1, 'new', 0); // Цель 1: статус "Новая", прогресс 0%
-    updateGoal(2, 'new', 0); // Цель 2: статус "Новая", прогресс 0%
-    updateGoal(3, 'new', 0); // Цель 3: статус "Новая", прогресс 0%
-    updateGoal(4, 'new', 0); // Цель 4: статус "Новая", прогресс 0%
-    updateGoal(5, 'new', 0); // Цель 5: статус "Новая", прогресс 0%
+    updateGoal(1, 'new', 0); // Цель 1: статус "Новое", прогресс 0%
+    updateGoal(2, 'new', 0); // Цель 2: статус "Новое", прогресс 0%
+    updateGoal(3, 'new', 0); // Цель 3: статус "Новое", прогресс 0%
+    updateGoal(4, 'new', 0); // Цель 4: статус "Новое", прогресс 0%
+    updateGoal(5, 'new', 0); // Цель 5: статус "Новое", прогресс 0%
 
     // Примеры обновления новостей
-    updateNews(1, 'new'); // Новость 1: статус "Новая"
+    updateNews(1, 'new'); // Новость 1: статус "Новое"
    
 });
 

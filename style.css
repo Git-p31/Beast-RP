@@ -221,46 +221,54 @@ section h1 {
 
 
 /* Модальное окно */
+/* Основные стили для фона модального окна */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон, более прозрачный */
-    display: none;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    display: none; /* Скрыто по умолчанию */
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-    backdrop-filter: blur(px); /* Эффект блюра */
+    z-index: 1000; /* Убедитесь, что модальное окно отображается поверх других элементов */
+    backdrop-filter: blur(10px); /* Эффект блюра фона */
 }
 
+/* Стили для модального окна */
 .modal {
-    background: rgba(34, 34, 34, 0.8); /* Полупрозрачный темный фон, более прозрачный */
+    background: rgba(34, 34, 34, 0.9); /* Полупрозрачный темный фон */
     border-radius: 8px;
     padding: 20px;
-    width: 90%; /* На всю ширину контейнера */
-    height: 90%; /* На всю высоту контейнера */
-    position: relative; /* Используем relative для позиционирования закрывающей кнопки */
-    margin: auto; /* Центрируем модальное окно */
-    overflow-y: auto; /* Добавить скролл, если контент не помещается */
-    max-height: 90%; /* Максимальная высота */
+    width: 80%; /* Ширина модального окна */
+    max-width: 800px; /* Максимальная ширина */
+    height: 80%; /* Высота модального окна */
+    max-height: 600px; /* Максимальная высота */
+    position: relative;
+    overflow-y: auto; /* Скролл, если контент не помещается */
+    margin: auto; /* Центрирование модального окна */
 }
 
+/* Стили для заголовка модального окна */
 .modal h2 {
     margin-top: 0;
-    color: #ffcc00;
+    color: #ffcc00; /* Цвет заголовка */
 }
 
-.modal p {
-    color: #ccc;
+/* Стили для текста модального окна */
+.modal-content p {
+    color: #ccc; /* Цвет текста */
+    line-height: 1.6; /* Интерлиньяж для улучшения читаемости */
+    margin: 0; /* Удаление отступов вокруг текста */
 }
 
+/* Стили для кнопки закрытия */
 .modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #dc3545;
+    background: #dc3545; /* Красный цвет кнопки */
     border: none;
     color: #fff;
     font-size: 24px;
@@ -274,8 +282,27 @@ section h1 {
 }
 
 .modal-close:hover {
-    background: #c82333;
+    background: #c82333; 
 }
+
+
+.modal-images {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.modal-image {
+    width: 150px; 
+    height: 100px; 
+    object-fit: cover; 
+    margin: 0 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+
 
 
 .container {
