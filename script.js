@@ -70,3 +70,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// Получаем все элементы с классом help-item
+const helpItems = document.querySelectorAll('.help-item');
+
+// Добавляем обработчик события на каждый элемент
+helpItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Убираем класс 'open' у всех плиток, кроме нажатой
+        helpItems.forEach(i => {
+            if (i !== item) {
+                i.classList.remove('open');
+            }
+        });
+        
+        // Переключаем класс 'open' на нажатой плитке
+        item.classList.toggle('open');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const helpItems = document.querySelectorAll('.help-item');
+
+    helpItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            // Закрыть все элементы
+            helpItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('open');
+                }
+            });
+            // Открыть текущий элемент
+            item.classList.add('open');
+        });
+
+        item.addEventListener('mouseleave', () => {
+            // Закрыть текущий элемент
+            item.classList.remove('open');
+        });
+    });
+});
