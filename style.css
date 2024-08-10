@@ -432,6 +432,12 @@ section h1 {
     color: #fff;
 }
 
+#help h1 {
+    text-align: center; /* Центрирование текста */
+    color: #f1c40f; /* Желтый цвет текста */
+}
+
+
 /* Сетка плиток */
 .help-grid {
     display: grid;
@@ -475,9 +481,6 @@ section h1 {
 }
 
 
-
-
-
 footer {
     background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон */
     color: #fff; /* Белый цвет текста */
@@ -503,4 +506,22 @@ footer a {
 
 footer a:hover {
     color: #ffc107; /* Более светлый жёлтый цвет при наведении */
+}
+
+/* Стили для блока социальных иконок */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Центрирование иконок по горизонтали */
+    gap: 15px; /* Расстояние между иконками */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.social-icon img {
+    width: 48px; /* Ширина иконок */
+    height: 48px; /* Высота иконок */
+    transition: opacity 0.3s; /* Плавный эффект при наведении */
+}
+
+.social-icon img:hover {
+    opacity: 0.7; /* Эффект изменения прозрачности при наведении */
 }
